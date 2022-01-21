@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include <string.h>
+using namespace std;
+bool is_palindrome(string str,int low,int high){
+    if (low>=high){
+        return true;
+    }
+    if(str[low]!=str[high]){
+        return false;
+    }
+    
+    return is_palindrome(str,low+1,high-1);
+
+
+}
+int main()
+{
+    string str="abcddcba";
+    int low=0;
+    int high= str.length();
+    if (is_palindrome(str, low, high-1)){
+        cout<<"palindrome";
+    }
+    else{
+        cout<<"not palindrome";
+    }
+    return 0;
+}
