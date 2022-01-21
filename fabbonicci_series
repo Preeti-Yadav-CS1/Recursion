@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+int fabbonicci_series(int n){
+    if(n==2){
+        return 1;
+    }
+    if(n==1){
+        return 0;
+    }
+    return fabbonicci_series(n-1)+fabbonicci_series(n-2);
+}
+int main()
+{
+    cout<<fabbonicci_series(3);
+
+    return 0;
+}
+
+
