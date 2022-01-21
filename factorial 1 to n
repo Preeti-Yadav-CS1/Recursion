@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+int sum_fun(int n){
+    if(n==0){
+        return 1;
+    }
+    int sum= sum_fun(n-1);
+    return sum*n;
+}
+int main()
+{
+    cout<<sum_fun(5);
+
+    return 0;
+}
